@@ -129,4 +129,4 @@ int main()
     scanf("%d",&A[i]);
     display_reverse(A,10);
     return 0;
-}
+}*/
