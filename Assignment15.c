@@ -129,4 +129,110 @@ int main()
     scanf("%d",&A[i]);
     display_reverse(A,10);
     return 0;
+}
+//6.Write a function in c to count a total number of duplicate elements in an arry.
+#include<stdio.h>
+void frequency(void);
+int main()
+{
+frequency();
+return 0;
+}
+void frequency(void)
+{
+int A[8]={1,2,3,7,8,3,2,4};
+int fre[9]={0},i,count=0;
+for(i=0;i<=8;i++)
+{
+fre[A[i]]++;
+}
+for(i=1;i<9;i++)
+{
+   if(fre[i]>1)
+   count++;
+}
+printf("total number of duplicate element is %d",count);
+}
+//7.Write a function in c to print all unique elements in an array.
+#include<stdio.h>
+void frequency(void);
+int main()
+{
+frequency();
+return 0;
+}
+void frequency(void)
+{
+int A[8]={1,2,3,4,8,3,2,4};
+int fre[9]={0},i;
+for(i=0;i<=8;i++)
+{
+fre[A[i]]++;
+}
+for(i=1;i<9;i++)
+{
+   if(fre[i]==1)
+   printf("%d \n",i);
+}
+}
+//9.Write a function in c to merge two arrays of the same size sorted in descending order.
+#include<stdio.h>
+void merge_sort(void)
+{
+int Arr1[]={1,3,11,9,10},Arr2[]={15,18,31,30,12},Arr3[10]={0},i,j,k=0,temp=0;
+for(i=0;i<10;i++)
+{
+if(i<=4)
+{
+Arr3[i]=Arr1[i];
+}
+else
+{
+Arr3[i]=Arr2[k];
+k++;
+}
+}
+for(i=0;i<9;i++)
+{
+for(j=i+1;j<10;j++)
+{
+if(Arr3[i]<Arr3[j])
+{
+temp=Arr3[i];
+Arr3[i]=Arr3[j];
+Arr3[j]=temp;
+}
+}
+}
+for(i=0;i<10;i++)
+printf("%d ",Arr3[i]);
+}
+int main()
+{
+merge_sort();
+return 0;
+}
+
+//10.Write a function in c to count the frequency of each element of an array
+#include<stdio.h>//this code not better for zeros.
+void frequency(void);
+int main()
+{
+frequency();
+return 0;
+}
+void frequency(void)
+{
+int A[8]={1,2,3,4,8,3,2,4};
+int fre[9]={0},i;
+for(i=0;i<=8;i++)
+{
+fre[A[i]]++;
+}
+for(i=1;i<9;i++)
+{
+   if(fre[i]!=0)
+   printf("%d -->>%d \n",i,fre[i]);
+}
 }*/
+
