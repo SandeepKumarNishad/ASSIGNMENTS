@@ -128,6 +128,29 @@ int fib(int n )
    return fib(n-1)+fib(n-2);
 }
 
+
+//9.Write a program in c to count the digits of a given number using recursion.
+
+#include<iostream>
+using namespace std;
+int count_digit(long int);
+int main()
+{
+	long int x=364329786;
+	cout<<count_digit(x);
+	return 0;
+}
+int count_digit(long int x)
+{
+	static int sum=0;
+	if(x==0)
+	  return 0;
+	  else
+	   return(sum=sum+1+count_digit(x/10));
+}
+
+
+
 #include<stdio.h>    //13.10
 int power(int,int);
 int main()
